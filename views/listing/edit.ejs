@@ -1,0 +1,49 @@
+<% layout("/layouts/boilerplate")-%>
+<body>
+    <h3>Update the details of your auction</h3>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="col mb-3">
+                    <label for="nameofproduct" class="form-label">Name of Product</label>
+                    <input name="listing[nameofproduct]" value="<%= listing.nameofproduct %>" id="nameofproduct" type="text" class="form-control" required>
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">Name field is required</div>
+                </div>
+                <div class="col mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input name="listing[description]" value="<%= listing.description %>" id="description" type="text" class="form-control" required>
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">description field is required</div>
+                </div>
+                <div class="col mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input name="listing[image]" value="<%= listing.image.url %>" id="nameofproduct" type="file" class="form-control" >
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">image field is required</div>
+                </div>
+                <div>
+                    Original Product Image<hr>
+                    <img src="<%= listing.image.url %>">
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-4">
+                        <label for="baseprice" class="form-label">Base Price</label>
+                        <input name="listing[baseprice]" value="<%= listing.baseprice %>" placeholder="Enter base price here" id="baseprice" type="number" class="form-control" required>
+                        <div class="valid-feedback">looks good</div>
+                        <div class="invalid-feedback">base price is required</div>
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="location" class="form-label">Location</label>
+                        <input name="listing[location]" value="<%= listing.location %>" placeholder="Enter current location of product" id="location" type="text" class="form-control" required>
+                        <div class="valid-feedback">looks good</div>
+                        <div class="invalid-feedback">Location is required</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-dark add-btn">Add Auction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

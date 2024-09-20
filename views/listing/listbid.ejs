@@ -1,0 +1,14 @@
+<% layout("/layouts/boilerplate")-%>
+<body>
+<form method="post" action="/listings/<%= listing._id %>/newbid?_method=PUT" novalidate class="needs-validation">
+    <div class="col mb-3">
+        <label for="bidprice" class="form-label">Your bid amount for the product</label>
+        <input name="newbid" placeholder="Enter bid amount" id="bidprice" type="number" class="form-control" required>
+        <div class="valid-feedback">looks good</div>
+        <div class="invalid-feedback">Name field is required</div>
+    </div>
+    <div>
+        <button class="btn btn-dark add-btn">Submit</button>
+    </div>
+</form>
+</body>

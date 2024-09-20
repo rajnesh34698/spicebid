@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate")-%>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-3">
+            <p class="showpagetitle"><%= listing.nameofproduct %></p>
+    <div class="card show-card"style="width: 40vw;" >
+        <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing.image.url" >
+        <div class="card-body">
+          <p>
+            <ul>
+                <p class="card-text"><%= listing.description %></p>
+                <p class="card-text">base price:&#8377;<%= listing.baseprice %></p>
+                <p id="topbid"  class="card-text">top bid:&#8377;<%= listing.topbid %></p>
+                <p class="card-text">location:<%= listing.location %></p>
+            </ul>
+          </p>
+          <a href="/listings/<%= listing._id%>/newbid" class="btn btn-dark">Bid the Product</a>
+          <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark">Edit bid details</a>
+          <br><br>
+          <form method="post"  class="btn btn-dark" action="/listing/<%= listing._id %>?_method=DELETE">
+            <button>Delte this Auction</button>
+          </form>
+          <a href="/listings/<%= listing._id %>/biddetails">show bid details</a>
+        </div>
+      </div>
+        </div>
+    </div>
+    <% if( listing.status=="active"&&listing.listbid){ %>
+      <h3>This listing won by <%= lastbid.bidOwner %>  </h3>
+    <% } %>
+    
+</body>
+

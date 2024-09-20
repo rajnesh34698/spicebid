@@ -1,0 +1,51 @@
+<% layout("/layouts/boilerplate")-%>
+<body>
+    <h3>Create a new auction</h3>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="col mb-3">
+                    <label for="nameofproduct" class="form-label">Name of Product</label>
+                    <input name="listing[nameofproduct]" placeholder="Enter product name" id="nameofproduct" type="text" class="form-control" required>
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">Name field is required</div>
+                </div>
+                <div class="col mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <input name="listing[description]" placeholder="Enter description here" id="description" type="text" class="form-control" required>
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">description field is required</div>
+                </div>
+                <div class="col mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input  name="listing[image]" placeholder="choose image file" id="nameofproduct" type="file" class="form-control" required>
+                    <div class="valid-feedback">looks good</div>
+                    <div class="invalid-feedback">image field is required</div>
+                </div>
+                <div class="row">
+                    <div class="mb-3 col-4">
+                        <label for="baseprice" class="form-label">Base Price</label>
+                        <input name="listing[baseprice]" placeholder="Enter base price here" id="baseprice" type="number" class="form-control" required>
+                        <div class="valid-feedback">looks good</div>
+                        <div class="invalid-feedback">base price is required</div>
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="location" class="form-label">Location</label>
+                        <input name="listing[location]" placeholder="Enter current location of product" id="location" type="text" class="form-control" required>
+                        <div class="valid-feedback">looks good</div>
+                        <div class="invalid-feedback">Location is required</div>
+                    </div>
+                    <div class="mb-3 col-4">
+                        <label for="time" class="form-label">Time</label>
+                        <input name="listing[time]" placeholder="Enter the time for which you want to put this auction(in days)" id="time" type="number" class="form-control" required>
+                        <div class="valid-feedback">looks good</div>
+                        <div class="invalid-feedback">Location is required</div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-dark add-btn">Add Auction</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

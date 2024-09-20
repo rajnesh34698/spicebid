@@ -1,0 +1,44 @@
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius:1 rem !important ;
+    width: 100% !important;
+    object-fit:cover !important;
+    
+}
+.card-body{
+    padding:0 !important;
+}
+.card-text{
+    font-weight: 400 !important;
+}
+.listing-link{
+    text-decoration: none !important;
+}
+.show-img{
+    height: 30vh;
+}
+.show-card{
+    border: none;
+}
+/*footer styling*/
+.bigdiv{
+    text-align: center;
+    background-color: rgba(164, 168, 172, 0.808);
+}
+.fa-brands{
+    font-size: 2rem;
+    margin-left: 10px;
+}
+.namediv{
+    font-size: 20px;
+}

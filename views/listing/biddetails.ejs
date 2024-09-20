@@ -1,0 +1,29 @@
+<% layout("/layouts/boilerplate")-%>
+<body>
+    
+    </body>
+
+
+
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Bid Owner</th>
+            <th scope="col">New Bid</th>
+            <th scope="col">Last Bid</th>
+          </tr>
+        </thead>
+        <tbody>
+           
+            <% for(listbid of listbid1){ %>
+          <tr>
+            <th scope="row"><%= i++ %></th>
+            <td><%= listbid.bidOwner %></td>
+            <td><%= listbid.newbid %></td>
+            <td><%= listbid.lastbid %></td>
+          </tr>
+          <% } %>
+         
+        </tbody>
+      </table>
